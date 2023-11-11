@@ -1,38 +1,134 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  border: none;
+  appearance: none;
+  outline: none;
+  background: none;
+
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  padding: 50px;
+  background-color: rgba(224, 201, 70, 0.74);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 440px;
+  height: 440px;
+  background-color: black;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+h3 {
+  color: black;
+}
+
+.tenzi-container {
+  position: relative;
+  width: 385px;
+  height: 385px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgb(224, 224, 191);
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(235, 228, 238);
+  color: rgb(245, 6, 6);
+  padding: 4px 8px;
+  border-radius: 10px;
+}
+
+.tenzi-container h2 {
+  margin-bottom: 8px;
+}
+
+.tenzi-container p {
+  width: 300px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.best-time {
+  color: rgb(77, 21, 99);
+  font-weight: bold;
+  margin-top: -6px;
+}
+
+.recent-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 160px;
+  left: 50px;
+  background-color: rgb(235, 228, 238);
+  color: rgb(245, 6, 6);
+  padding: 4px 8px;
+  border-radius: 10px;
+}
+
+.dice-container {
+  display: grid;
+  grid-template: 1fr 1fr/ repeat(5, 1fr);
+  gap: 15px;
+  margin: 12px 0 25px;
+}
+
+.dice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgb(221, 218, 218);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.dice-dots {
+  width: 1px;
+  height: 1px;
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 0 3px 0 0;
+}
+
+.button-container {
+  width: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button-container button {
+  padding: 4px 12px;
+  margin-right: 15px;
+  border-radius: 4px;
+  font-size: 18px;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  background-color: rgb(77, 21, 99);
+  white-space: nowrap;
 }
