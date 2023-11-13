@@ -135,6 +135,8 @@ body {
   .app-container {
     width: 320px;
     height: 320px;
+    margin-top: 1.4em;
+    margin-left: -1em;
   }
 
   .tenzi-container {
