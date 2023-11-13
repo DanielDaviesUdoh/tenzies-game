@@ -15,7 +15,7 @@ button {
 }
 
 body {
-  padding: 50px;
+  padding: 4.5em;
   background-color: rgba(224, 201, 70, 0.74);
 }
 
@@ -26,12 +26,8 @@ body {
   width: 440px;
   height: 440px;
   background-color: black;
-  padding: 5px;
+  padding: 1em;
   margin: 0 auto;
-}
-
-h3 {
-  color: black;
 }
 
 .tenzi-container {
@@ -42,7 +38,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 15px;
+  padding: 1em;
   border-radius: 5px;
   background-color: rgb(224, 224, 191);
 }
@@ -54,26 +50,29 @@ h3 {
   position: absolute;
   top: 0;
   left: 0;
+  font-size: 1.2rem;
   background-color: rgb(235, 228, 238);
   color: rgb(245, 6, 6);
-  padding: 4px 8px;
+  padding: 0.2em 0.5em;
   border-radius: 10px;
 }
 
 .tenzi-container h2 {
-  margin-bottom: 8px;
+  margin-bottom: 0.3em;
+  font-size: 1.8rem;
 }
 
 .tenzi-container p {
-  width: 300px;
+  width: 80%;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 1.4em;
+  font-size: 1rem;
 }
 
 .best-time {
   color: rgb(77, 21, 99);
   font-weight: bold;
-  margin-top: -6px;
+  margin-top: -0.1em;
 }
 
 .recent-time {
@@ -81,19 +80,19 @@ h3 {
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 160px;
-  left: 50px;
+  top: 40%;
+  left: 10%;
   background-color: rgb(235, 228, 238);
   color: rgb(245, 6, 6);
-  padding: 4px 8px;
+  padding: 0.3em 0.6px;
   border-radius: 10px;
 }
 
 .dice-container {
   display: grid;
   grid-template: 1fr 1fr/ repeat(5, 1fr);
-  gap: 15px;
-  margin: 12px 0 25px;
+  gap: 1em;
+  margin: 0.8em 0 2em;
 }
 
 .dice {
@@ -103,7 +102,6 @@ h3 {
   flex-wrap: wrap;
   width: 50px;
   height: 50px;
-  border: 1px solid rgb(221, 218, 218);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -113,22 +111,98 @@ h3 {
   border: none;
   border-radius: 50%;
   padding: 5px;
-  margin: 0 3px 0 0;
+  margin: 0 1.5px 0 1.5px;
 }
 
 .button-container {
-  width: 230px;
+  width: 65%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .button-container button {
-  padding: 4px 12px;
-  margin-right: 15px;
+  padding: 0.3em 0.6em;
+  margin-right: 1em;
   border-radius: 4px;
-  font-size: 18px;
+  font-size: 1.05rem;
   color: white;
   background-color: rgb(77, 21, 99);
   white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    width: 320px;
+    height: 320px;
+  }
+
+  .tenzi-container {
+    position: relative;
+    width: 285px;
+    height: 285px;
+  }
+
+  .timer {
+    padding: 0.2em 0.4em;
+    border-radius: 5px;
+    font-size: 0.95rem;
+  }
+
+  .tenzi-container h2 {
+    margin-bottom: 0.18em;
+    font-size: 1.1rem;
+    margin-top: 1em;
+  }
+
+  .tenzi-container p {
+    width: 90%;
+    text-align: center;
+    margin-bottom: 0.75em;
+    font-size: 0.8rem;
+  }
+
+  .best-time {
+    color: rgb(154, 41, 199);
+    font-weight: bold;
+  }
+  
+  .recent-time {
+    top: 42%;
+    left: 5%;
+    padding: 0.3em 0.6px;
+    border-radius: 7px;
+  }
+
+  .dice-container {
+    display: grid;
+    grid-template: 1fr 1fr/ repeat(5, 1fr);
+    gap: 0.6em;
+    margin: 1.5em 0 1.2em;
+  }
+
+  .dice {
+    width: 40px;
+    height: 40px;
+    padding: 0.1em;
+  }
+
+  .dice-dots {
+    width: 0.4px;
+    height: 0.4px;
+  }
+
+  .button-container {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .button-container button {
+    padding: 0.2em 0.4em;
+    margin-right: 0.6em;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
 }

@@ -2,6 +2,7 @@ import React, {useEffect, useRef} from 'react'
 
 export default function Time({time, setTime, startTimer, gameOver, runGetTime}) {
   const timeRef = useRef(null)
+  const timer = renderTime()
   
   useEffect(() => {
     if (startTimer) {
@@ -18,7 +19,7 @@ export default function Time({time, setTime, startTimer, gameOver, runGetTime}) 
 
     return ()=> clearInterval(timeRef.current)
    
-  }, [startTimer, gameOver])
+  }, [startTimer, gameOver, runGetTime,setTime, timer])
 
   function renderTime() {
     const getSeconds = `0${time % 60}`.slice(-2)
@@ -28,8 +29,6 @@ export default function Time({time, setTime, startTimer, gameOver, runGetTime}) 
   
     return `${getHours}:${getMinutes}:${getSeconds}`
   }
-
-  const timer = renderTime()
 
   return (
     <>

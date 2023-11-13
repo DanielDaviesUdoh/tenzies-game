@@ -14,6 +14,8 @@ function ParentTenzi() {
   const [getTime, setGetTime] = useState([])
 
   useEffect(()=> {
+    document.title = 'Tenzies'
+
     const savedTime = JSON.parse(localStorage.getItem('getTime'))
     if(savedTime) {
       setGetTime(savedTime)
