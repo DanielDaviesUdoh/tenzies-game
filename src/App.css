@@ -15,7 +15,10 @@ button {
 }
 
 body {
-  padding: 4.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4.5em;
   background-color: rgba(224, 201, 70, 0.74);
 }
 
@@ -27,7 +30,6 @@ body {
   height: 440px;
   background-color: black;
   padding: 1em;
-  margin: 0 auto;
 }
 
 .tenzi-container {
@@ -132,11 +134,15 @@ body {
 }
 
 @media (max-width: 480px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .app-container {
     width: 320px;
     height: 320px;
-    margin-top: 1.4em;
-    margin-left: -1em;
   }
 
   .tenzi-container {

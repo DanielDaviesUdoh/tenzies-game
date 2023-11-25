@@ -18,8 +18,9 @@ export default function Time({time, setTime, startTimer, gameOver, runGetTime}) 
     }
 
     return ()=> clearInterval(timeRef.current)
-   
-  }, [startTimer, gameOver, runGetTime,setTime, timer])
+
+    // eslint-disable-next-line
+  }, [startTimer, gameOver])
 
   function renderTime() {
     const getSeconds = `0${time % 60}`.slice(-2)
